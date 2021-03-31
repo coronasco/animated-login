@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-weight: 300;
+    color: #fff;
+    animation: heading 2s;
+}
+
+@keyframes heading {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#e4e4e4, #fff);
+}
+
+.log-in {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/security.jpg') center no-repeat;
+    background-size: cover;
+    width: 400px;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    position: relative;
+    animation: log-in-animation 1s;
+    overflow: hidden;
+}
+
+@keyframes log-in-animation {
+    0% {
+        height: 0px;
+    }
+
+    100% {
+        height: 450px;
+    }
+}
+
+.form {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 330px;
+    width: 100%;
+    background: linear-gradient(#efefef, #fff);
+    border-radius: 20px;
+    padding: 40px;
+    overflow: hidden;
+    animation: form-animation 2.5s
+}
+
+@keyframes form-animation {
+    0% {
+        opacity: 0;
+        height: 0px;
+        bottom: -100px;
+    }
+
+    50% {
+        opacity: 0;
+        height: 0px;
+        bottom: -100px;
+    }
+
+    100% {
+        opacity: 1;
+        height: 330px;
+        bottom: 0
+    }
+}
+
+.form h2 {
+    font-size: 24px;
+    font-weight: 800;
+    padding-bottom: 30px;
+}
+
+
+.form .inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form .inputs input {
+    border: 0;
+    border-radius: 0;
+    padding: 10px 0 5px 0;
+    margin-bottom: 20px;
+    background: none;
+    border-bottom: 2px solid #d2d2d2;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.form .inputs input:focus {
+    outline: none;
+    border-bottom: 2px solid #FF5353;
+}
+
+.form .inputs input::placeholder {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.links {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a {
+    text-decoration: none;
+    color: #a2a2a2;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.links a:first-child {
+    color: #FF5353;
+}
